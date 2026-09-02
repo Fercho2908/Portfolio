@@ -1,0 +1,70 @@
+---
+---
+
+<header class="fixed top-0 left-0 right-0 z-50 bg-surface/80 backdrop-blur-xl border-b border-border">
+  <nav class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+    <a href="#" class="font-mono text-sm font-medium text-text-primary tracking-tight">
+      F.Figuera
+    </a>
+
+    <div class="hidden md:flex items-center gap-8">
+      <a href="#projects" class="text-sm text-text-secondary hover:text-accent transition-colors duration-200" data-i18n="nav.projects">Proyectos</a>
+      <a href="#experience" class="text-sm text-text-secondary hover:text-accent transition-colors duration-200" data-i18n="nav.experience">Experiencia</a>
+      <a href="#stack" class="text-sm text-text-secondary hover:text-accent transition-colors duration-200" data-i18n="nav.stack">Stack</a>
+      <a href="#contact" class="text-sm text-text-secondary hover:text-accent transition-colors duration-200" data-i18n="nav.contact">Contacto</a>
+    </div>
+
+    <div class="flex items-center gap-3">
+      <button
+        id="lang-toggle"
+        class="px-2.5 py-1 rounded-md text-xs font-mono font-medium border border-border text-text-secondary hover:text-accent hover:border-accent transition-all duration-200"
+        aria-label="Toggle language"
+      >ES</button>
+
+      <button
+        id="theme-toggle"
+        class="p-2 rounded-md text-text-secondary hover:text-accent transition-colors duration-200"
+        aria-label="Toggle theme"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      </button>
+
+      <button
+        id="mobile-menu-toggle"
+        class="md:hidden p-2 rounded-md text-text-secondary hover:text-accent transition-colors duration-200"
+        aria-label="Toggle menu"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden absolute top-16 left-0 right-0 bg-surface border-b border-border px-6 py-4">
+      <div class="flex flex-col gap-4">
+        <a href="#projects" class="text-sm text-text-secondary hover:text-accent transition-colors" data-i18n="nav.projects">Proyectos</a>
+        <a href="#experience" class="text-sm text-text-secondary hover:text-accent transition-colors" data-i18n="nav.experience">Experiencia</a>
+        <a href="#stack" class="text-sm text-text-secondary hover:text-accent transition-colors" data-i18n="nav.stack">Stack</a>
+        <a href="#contact" class="text-sm text-text-secondary hover:text-accent transition-colors" data-i18n="nav.contact">Contacto</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<script>
+  const menuToggle = document.getElementById('mobile-menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  menuToggle?.addEventListener('click', () => {
+    mobileMenu?.classList.toggle('hidden');
+  });
+
+  mobileMenu?.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      mobileMenu?.classList.add('hidden');
+    });
+  });
+
+  const langToggle = document.getElementById('lang-toggle');
+  langToggle?.addEventListener('click', () => {
+    import('../scripts/i18n').then(({ toggleLanguage }) => toggleLanguage());
+  });
+</script>

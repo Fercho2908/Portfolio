@@ -1,0 +1,47 @@
+---
+const education = [
+  { degreeKey: 'education.e1_degree', degree: 'Ingeniería en Sistemas', schoolKey: 'education.e1_school', school: 'IUP Santiago Mariño', dateKey: 'education.e1_date', date: '2022 — Presente' },
+  { degreeKey: 'education.e2_degree', degree: 'TSU en Informática', schoolKey: 'education.e2_school', school: 'IUTIRLA', dateKey: 'education.e2_date', date: '2019 — 2022' },
+  { degreeKey: 'education.e3_degree', degree: 'Bachiller', schoolKey: 'education.e3_school', school: 'U.E.C.E. Jean Piaget', dateKey: 'education.e3_date', date: '2013 — 2018' },
+];
+
+const certs = [
+  'Desarrollo de APIs con Microservicios — Academos (2026)',
+  'Curso de Git — Academos (2025)',
+  'Pensamiento Lógico — Platzi (2024)',
+  'Frontend Developer — Platzi (2024)',
+  'Curso de Python — Platzi (2024)',
+  'Redes Informáticas — Platzi (2024)',
+  'Mantenimiento de Computadoras — IUTIRLA (2019)',
+];
+---
+
+<section id="education" class="py-section">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="reveal">
+      <p class="section-title" data-i18n="education.label">EDUCACIÓN</p>
+      <h2 class="text-display-lg font-bold mb-12" data-i18n="education.title">Formación Académica</h2>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+      <div class="reveal stagger-1">
+        {education.map((edu, idx) => (
+          <div class={`mb-8 ${idx !== education.length - 1 ? 'pb-8 border-b border-border' : ''}`}>
+            <span class="font-mono text-xs text-text-muted" data-i18n={edu.dateKey}>{edu.date}</span>
+            <h3 class="text-lg font-bold mt-1" data-i18n={edu.degreeKey}>{edu.degree}</h3>
+            <p class="text-sm text-text-secondary" data-i18n={edu.schoolKey}>{edu.school}</p>
+          </div>
+        ))}
+      </div>
+
+      <div class="reveal stagger-2">
+        <h3 class="font-mono text-xs uppercase tracking-[0.15em] text-text-muted mb-6" data-i18n="education.certs_title">Certificaciones</h3>
+        <div class="flex flex-wrap gap-2">
+          {certs.map((cert, idx) => (
+            <span class={`tech-pill stagger-${(idx % 8) + 1}`}>{cert}</span>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

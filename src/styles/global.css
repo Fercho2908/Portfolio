@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-surface: oklch(97% 0.005 260);
+  --color-surface-elevated: oklch(100% 0 0);
+  --color-accent: oklch(55% 0.17 255);
+  --color-accent-hover: oklch(50% 0.18 255);
+  --color-accent-muted: oklch(92% 0.04 255);
+  --color-text-primary: oklch(15% 0.01 260);
+  --color-text-secondary: oklch(45% 0.01 260);
+  --color-text-muted: oklch(60% 0.01 260);
+  --color-border: oklch(88% 0.01 260);
+  color-scheme: light;
+}
+
+.dark {
+  --color-surface: oklch(12% 0.01 260);
+  --color-surface-elevated: oklch(18% 0.01 260);
+  --color-accent: oklch(70% 0.15 255);
+  --color-accent-hover: oklch(65% 0.16 255);
+  --color-accent-muted: oklch(25% 0.08 255);
+  --color-text-primary: oklch(92% 0.005 260);
+  --color-text-secondary: oklch(65% 0.01 260);
+  --color-text-muted: oklch(45% 0.01 260);
+  --color-border: oklch(25% 0.01 260);
+  color-scheme: dark;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  section[id] {
+    scroll-margin-top: 5rem;
+  }
+
+  body {
+    @apply bg-surface text-text-primary font-body;
+    transition: background-color 0.2s ease-out, color 0.2s ease-out;
+    background-image:
+      linear-gradient(oklch(50% 0.01 260 / 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, oklch(50% 0.01 260 / 0.05) 1px, transparent 1px);
+    background-size: 44px 44px;
+  }
+
+  ::selection {
+    background-color: var(--color-accent-muted);
+    color: var(--color-text-primary);
+  }
+}
+
+@layer components {
+  .section-title {
+    @apply font-mono text-xs uppercase tracking-[0.2em] text-text-muted mb-8;
+  }
+
+  .tech-pill {
+    @apply inline-flex items-center px-3 py-1.5 rounded-full text-sm font-mono
+           bg-surface-elevated border border-border text-text-secondary
+           transition-all duration-200 ease-out;
+  }
+
+  .tech-pill:hover {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+  }
+
+  .card-hover {
+    box-shadow: 0 4px 24px -8px var(--color-accent-muted);
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@layer utilities {
+  .stagger-1 { transition-delay: 0.05s; }
+  .stagger-2 { transition-delay: 0.1s; }
+  .stagger-3 { transition-delay: 0.15s; }
+  .stagger-4 { transition-delay: 0.2s; }
+  .stagger-5 { transition-delay: 0.25s; }
+  .stagger-6 { transition-delay: 0.3s; }
+  .stagger-7 { transition-delay: 0.35s; }
+  .stagger-8 { transition-delay: 0.4s; }
+}

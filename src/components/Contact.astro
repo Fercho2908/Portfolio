@@ -1,0 +1,32 @@
+---
+const links = [
+  { labelKey: 'contact.email', label: 'Email', href: 'mailto:fefc2908@gmail.com', display: 'fefc2908@gmail.com', icon: 'email' },
+  { labelKey: 'contact.phone', label: 'Teléfono', href: 'tel:+584249246863', display: '+58 424-9246863', icon: 'phone' },
+  { labelKey: 'contact.github', label: 'GitHub', href: 'https://github.com/fercho2908', display: 'github.com/fercho2908', icon: 'github' },
+  { labelKey: 'contact.whatsapp', label: 'WhatsApp', href: 'https://wa.me/584249246863', display: 'WhatsApp', icon: 'whatsapp' },
+];
+---
+
+<section id="contact" class="py-section">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="reveal">
+      <p class="section-title" data-i18n="contact.label">CONTACTO</p>
+      <h2 class="text-display-lg font-bold mb-4" data-i18n="contact.title">¿Trabajamos juntos?</h2>
+      <p class="text-text-secondary mb-12" data-i18n="contact.description">Siempre abierto a nuevas oportunidades y colaboraciones.</p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      {links.map((link, idx) => (
+        <a
+          href={link.href}
+          target={link.href.startsWith('http') ? '_blank' : undefined}
+          rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+          class={`reveal stagger-${idx + 1} group flex flex-col p-5 rounded-xl border border-border bg-surface-elevated transition-all duration-300 hover:border-accent hover:shadow-lg card-hover`}
+        >
+          <span class="text-xs font-mono uppercase tracking-wider text-text-muted mb-2" data-i18n={link.labelKey}>{link.label}</span>
+          <span class="text-sm text-text-primary group-hover:text-accent transition-colors duration-200 break-all">{link.display}</span>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>

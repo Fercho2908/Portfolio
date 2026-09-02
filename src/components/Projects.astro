@@ -1,0 +1,114 @@
+---
+const projects = [
+  {
+    id: 'p1',
+    image: '/profile.webp',
+    tags: ['Python', 'Reflex'],
+    link: 'https://profile-red-panda.reflex.run/',
+    linkLabel: 'view',
+    hasScreenshot: true,
+  },
+  {
+    id: 'p2',
+    image: null,
+    tags: ['Python', 'Django', 'RAG', 'AI'],
+    link: null,
+    linkLabel: 'soon',
+    hasScreenshot: false,
+  },
+  {
+    id: 'p3',
+    image: '/Ahorcado.webp',
+    tags: ['VB.NET'],
+    link: 'https://github.com/fercho2908/Ahorcado',
+    linkLabel: 'code',
+    hasScreenshot: true,
+  },
+];
+---
+
+<section id="projects" class="py-section">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="reveal">
+      <p class="section-title" data-i18n="projects.label">PROYECTOS</p>
+      <h2 class="text-display-lg font-bold mb-12" data-i18n="projects.title">Trabajo Destacado</h2>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      {projects.map((project, idx) => (
+        <div class={`reveal stagger-${idx + 1} group`}>
+          <div class="rounded-xl border border-border bg-surface-elevated overflow-hidden transition-all duration-300 hover:border-accent hover:shadow-lg card-hover h-full flex flex-col">
+            {project.hasScreenshot ? (
+              <div class="aspect-video overflow-hidden bg-surface">
+                <img
+                  src={project.image}
+                  alt={`Screenshot de ${project.id}`}
+                  class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                  loading="lazy"
+                />
+              </div>
+            ) : (
+              <div class="aspect-video bg-surface p-6 flex items-center justify-center">
+                <div class="max-w-xs w-full rounded-lg border border-border bg-surface-elevated overflow-hidden">
+                  <div class="px-3 py-2 border-b border-border flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-accent"></span>
+                    <span class="text-[10px] font-mono text-text-muted uppercase tracking-wider">RAG Assistant</span>
+                  </div>
+                  <div class="p-3 space-y-2 text-xs font-mono">
+                    <div class="flex gap-2">
+                      <span class="text-text-muted shrink-0">User</span>
+                      <span class="text-text-secondary">¿Hay laptops en oferta?</span>
+                    </div>
+                    <div class="flex gap-2">
+                      <span class="text-accent shrink-0">Bot</span>
+                      <span class="text-text-secondary">Encontré 3 laptops con 15% descuento en el inventario.</span>
+                    </div>
+                    <div class="flex gap-2">
+                      <span class="text-text-muted shrink-0">ctx</span>
+                      <span class="text-text-muted">retrieval → embeddings → LLM</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            <div class="p-5 flex flex-col flex-1">
+              <h3 class="font-bold text-lg mb-2" data-i18n={`projects.${project.id}_title`}>
+                {project.id === 'p1' ? 'Portafolio Personal' : project.id === 'p2' ? 'Ecommerce + Chatbot RAG' : 'Juego Ahorcado'}
+              </h3>
+              <p class="text-sm text-text-secondary leading-relaxed mb-4 flex-1" data-i18n={`projects.${project.id}_desc`}>
+                {project.id === 'p1'
+                  ? 'Mi primer portafolio web construido desde cero con Reflex (Python).'
+                  : project.id === 'p2'
+                    ? 'Backend para ecommerce con chatbot de IA integrado usando Retrieval-Augmented Generation.'
+                    : 'Mi primer juego, creado en VB.NET a partir de lo aprendido en mi segundo semestre.'}
+              </p>
+
+              <div class="flex flex-wrap gap-1.5 mb-4">
+                {project.tags.map((tag) => (
+                  <span class="px-2 py-0.5 rounded text-xs font-mono bg-accent-muted text-accent">{tag}</span>
+                ))}
+              </div>
+
+              {project.link ? (
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center gap-1.5 text-sm font-medium text-accent hover:text-accent-hover transition-colors duration-200"
+                >
+                  <span data-i18n={`projects.${project.linkLabel}`}>
+                    {project.linkLabel === 'view' ? 'Ver' : project.linkLabel === 'code' ? 'Código' : 'Próximamente'}
+                  </span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                </a>
+              ) : (
+                <span class="text-sm font-mono text-text-muted" data-i18n="projects.soon">Próximamente</span>
+              )}
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

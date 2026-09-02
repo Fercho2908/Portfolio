@@ -1,0 +1,46 @@
+---
+const categories = [
+  {
+    labelKey: 'stack.languages',
+    label: 'Lenguajes',
+    items: ['Python', 'Java', 'C#', 'VB.NET'],
+  },
+  {
+    labelKey: 'stack.backend',
+    label: 'Backend',
+    items: ['Django', 'MySQL', 'PostgreSQL', 'HTML/CSS'],
+  },
+  {
+    labelKey: 'stack.tools',
+    label: 'Herramientas',
+    items: ['Git', 'Linux', 'Bash', 'Microsoft Office'],
+  },
+  {
+    labelKey: 'stack.ai',
+    label: 'IA & Automatización',
+    items: ['Claude Code', 'OpenCode', 'n8n'],
+  },
+];
+---
+
+<section id="stack" class="py-section">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="reveal">
+      <p class="section-title" data-i18n="stack.label">HABILIDADES</p>
+      <h2 class="text-display-lg font-bold mb-12" data-i18n="stack.title">Mi Stack Tecnológico</h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {categories.map((cat, catIdx) => (
+        <div class={`reveal stagger-${catIdx + 1}`}>
+          <h3 class="font-mono text-xs uppercase tracking-[0.15em] text-text-muted mb-4" data-i18n={cat.labelKey}>{cat.label}</h3>
+          <div class="flex flex-wrap gap-2">
+            {cat.items.map((item, i) => (
+              <span class={`tech-pill stagger-${i + 1}`}>{item}</span>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

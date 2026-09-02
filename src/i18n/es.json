@@ -1,0 +1,91 @@
+{
+  "nav": {
+    "projects": "Proyectos",
+    "experience": "Experiencia",
+    "stack": "Stack",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "greeting": "Hola, soy",
+    "name": "Fernando Figuera",
+    "title": "TSU en Informática · Est. Ingeniería en Sistemas",
+    "description": "Apasionado por la tecnología y la programación. Mi objetivo es aportar y seguir desarrollando mi carrera profesional, aplicando mis conocimientos para diseñar e implementar soluciones tecnológicas innovadoras.",
+    "cta_projects": "Ver proyectos",
+    "cta_contact": "Contactar",
+    "stat_years": "Años de experiencia",
+    "stat_projects": "Proyectos",
+    "stat_certs": "Certificaciones"
+  },
+  "stack": {
+    "label": "HABILIDADES",
+    "title": "Mi Stack Tecnológico",
+    "languages": "Lenguajes",
+    "backend": "Backend",
+    "tools": "Herramientas",
+    "ai": "IA & Automatización"
+  },
+  "projects": {
+    "label": "PROYECTOS",
+    "title": "Trabajo Destacado",
+    "view": "Ver",
+    "code": "Código",
+    "soon": "Próximamente",
+    "p1_title": "Portafolio Personal",
+    "p1_desc": "Mi primer portafolio web construido desde cero con Reflex (Python). Una aplicación fullstack que demuestra mis habilidades en desarrollo backend y frontend.",
+    "p2_title": "Ecommerce + Chatbot RAG",
+    "p2_desc": "Backend para ecommerce con chatbot de IA integrado usando Retrieval-Augmented Generation. Django maneja la lógica del negocio mientras el RAG responde preguntas sobre productos.",
+    "p3_title": "Juego Ahorcado",
+    "p3_desc": "Mi primer juego, creado en VB.NET a partir de lo aprendido en mi segundo semestre de universidad. Incluye lógica de juego completa y interfaz gráfica interactiva."
+  },
+  "experience": {
+    "label": "EXPERIENCIA",
+    "title": "Trayectoria Profesional",
+    "e1_role": "Administrador de Sistemas",
+    "e1_company": "Helados Kolibrí",
+    "e1_location": "Güiria, Sucre",
+    "e1_bullets": "Mantenimiento preventivo y correctivo de computadores. Implementación de sistema de inventario digitalizado. Inducción a nuevos usuarios.",
+    "e2_role": "Asistente de Sistemas",
+    "e2_company": "Hotel Luciano Junior C.A.",
+    "e2_location": "Maturín, Monagas",
+    "e2_bullets": "Desarrollo de scripts en PowerShell. Monitoreo de red empresarial. Gestión de sistemas administrativos (A2, HOSPES).",
+    "e3_role": "Pasante de Sistemas",
+    "e3_company": "Hotel Luciano Junior C.A.",
+    "e3_location": "Maturín, Monagas",
+    "e3_bullets": "Diseño e implementación de sistema de inventario para control de computadoras por departamento."
+  },
+  "education": {
+    "label": "EDUCACIÓN",
+    "title": "Formación Académica",
+    "e1_degree": "Ingeniería en Sistemas",
+    "e1_school": "IUP Santiago Mariño",
+    "e1_date": "2022 — Presente",
+    "e2_degree": "TSU en Informática",
+    "e2_school": "IUTIRLA",
+    "e2_date": "2019 — 2022",
+    "e3_degree": "Bachiller",
+    "e3_school": "U.E.C.E. Jean Piaget",
+    "e3_date": "2013 — 2018",
+    "certs_title": "Certificaciones",
+    "certs": [
+      "Desarrollo de APIs con Microservicios — Academos (2026)",
+      "Curso de Git — Academos (2025)",
+      "Pensamiento Lógico — Platzi (2024)",
+      "Frontend Developer — Platzi (2024)",
+      "Curso de Python — Platzi (2024)",
+      "Redes Informáticas — Platzi (2024)",
+      "Mantenimiento de Computadoras — IUTIRLA (2019)"
+    ]
+  },
+  "contact": {
+    "label": "CONTACTO",
+    "title": "¿Trabajamos juntos?",
+    "description": "Siempre abierto a nuevas oportunidades y colaboraciones.",
+    "email": "Email",
+    "phone": "Teléfono",
+    "github": "GitHub",
+    "whatsapp": "WhatsApp"
+  },
+  "footer": {
+    "built": "Construido con Astro + Tailwind"
+  }
+}

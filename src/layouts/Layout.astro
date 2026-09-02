@@ -1,0 +1,63 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'Fernando Figuera | Portfolio',
+  description = 'TSU en Informática · Est. Ingeniería en Sistemas · Portfolio personal',
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <script is:inline>
+      (function() {
+        var t = localStorage.getItem('theme');
+        if (t === 'dark' || (!t && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
+      })();
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+    <link rel="icon" type="image/webp" href="/Fernando.webp" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style is:inline>
+      :root {
+        --font-display: 'Space Grotesk', system-ui, sans-serif;
+        --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+      }
+      body { font-family: var(--font-display); }
+      .font-mono { font-family: var(--font-mono); }
+    </style>
+  </head>
+  <body class="min-h-screen bg-surface text-text-primary antialiased">
+    <slot />
+
+    <script>
+      import { initTheme } from '../scripts/theme';
+      import { initI18n } from '../scripts/i18n';
+      import { initAnimations } from '../scripts/animations';
+
+      document.addEventListener('DOMContentLoaded', () => {
+        initTheme();
+        initI18n();
+        initAnimations();
+      });
+    </script>
+  </body>
+</html>
