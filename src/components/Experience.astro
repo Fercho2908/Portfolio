@@ -7,7 +7,7 @@ const experiences = [
     company: 'Helados Kolibrí',
     locationKey: 'experience.e1_location',
     location: 'Güiria, Sucre',
-    date: 'Abr 2024 — May 2024',
+    date: 'Abr 2024 — Sept 2026',
     bulletsKey: 'experience.e1_bullets',
     bullets: 'Mantenimiento preventivo y correctivo de computadores. Implementación de sistema de inventario digitalizado. Inducción a nuevos usuarios.',
   },
@@ -49,7 +49,7 @@ const experiences = [
       {experiences.map((exp, idx) => (
         <div class={`reveal stagger-${idx + 1} relative mb-12 last:mb-0`}>
           <div class={`flex flex-col md:flex-row ${idx % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
-            <div class={`md:w-1/2 ${idx % 2 === 0 ? 'md:pr-12 md:text-right' : 'md:pl-12'}`}>
+            <div class={`pl-12 md:w-1/2 ${idx % 2 === 0 ? 'md:pr-12 md:text-right md:pl-0' : 'md:pl-12'}`}>
               <span class="font-mono text-xs text-text-muted">{exp.date}</span>
               <h3 class="text-lg font-bold mt-1" data-i18n={exp.roleKey}>{exp.role}</h3>
               <p class="text-sm text-accent font-medium" data-i18n={exp.companyKey}>{exp.company}</p>

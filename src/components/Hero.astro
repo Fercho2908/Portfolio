@@ -3,7 +3,7 @@
 
 <section class="min-h-screen flex items-center pt-16">
   <div class="max-w-6xl mx-auto px-6 py-24 w-full">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center">
       <div class="reveal">
         <p class="font-mono text-sm text-accent mb-4" data-i18n="hero.greeting">Hola, soy</p>
         <h1 class="text-display-xl font-bold text-text-primary mb-4" data-i18n="hero.name">Fernando Figuera</h1>
@@ -13,15 +13,17 @@
         </p>
       </div>
 
-      <div class="reveal stagger-2 hidden lg:flex justify-center">
-        <div class="relative">
-          <div class="absolute -inset-4 rounded-3xl bg-accent-muted opacity-40 blur-sm"></div>
+      <div class="reveal order-first lg:order-none flex justify-center">
+        <div class="relative shrink-0">
+          <div class="absolute -inset-4 rounded-full bg-accent-muted opacity-40 blur-2xl lg:rounded-3xl lg:blur-sm"></div>
           <img
             src="/Fernando.webp"
             alt="Fernando Figuera"
-            class="relative w-72 h-96 object-cover rounded-2xl border border-border shadow-lg"
+            width="1705"
+            height="1705"
+            class="relative w-40 h-40 sm:w-44 sm:h-44 lg:w-72 lg:h-96 object-cover object-center rounded-full lg:rounded-2xl border border-border shadow-lg"
           />
-          <div class="absolute -bottom-4 -right-4 px-4 py-2 rounded-lg bg-accent text-white font-mono text-xs font-medium shadow-lg">
+          <div class="absolute bottom-1 right-1 px-3 py-1.5 rounded-full bg-accent text-white font-mono text-[11px] font-semibold shadow-lg lg:-bottom-4 lg:-right-4 lg:px-4 lg:py-2 lg:rounded-lg lg:text-xs lg:font-medium">
             &lt;dev /&gt;
           </div>
         </div>
@@ -37,21 +39,6 @@
         <span data-i18n="hero.cta_contact">Contactar</span>
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
       </a>
-    </div>
-
-    <div class="reveal stagger-4 grid grid-cols-3 gap-8 max-w-md">
-      <div>
-        <span class="block text-3xl font-bold font-mono text-accent">3+</span>
-        <span class="text-xs font-mono uppercase tracking-wider text-text-muted" data-i18n="hero.stat_years">Años de experiencia</span>
-      </div>
-      <div>
-        <span class="block text-3xl font-bold font-mono text-accent">3</span>
-        <span class="text-xs font-mono uppercase tracking-wider text-text-muted" data-i18n="hero.stat_projects">Proyectos</span>
-      </div>
-      <div>
-        <span class="block text-3xl font-bold font-mono text-accent">10+</span>
-        <span class="text-xs font-mono uppercase tracking-wider text-text-muted" data-i18n="hero.stat_certs">Certificaciones</span>
-      </div>
     </div>
   </div>
 </section>

@@ -11,10 +11,7 @@
     "title": "TSU en Informática · Est. Ingeniería en Sistemas",
     "description": "Apasionado por la tecnología y la programación. Mi objetivo es aportar y seguir desarrollando mi carrera profesional, aplicando mis conocimientos para diseñar e implementar soluciones tecnológicas innovadoras.",
     "cta_projects": "Ver proyectos",
-    "cta_contact": "Contactar",
-    "stat_years": "Años de experiencia",
-    "stat_projects": "Proyectos",
-    "stat_certs": "Certificaciones"
+    "cta_contact": "Contactar"
   },
   "stack": {
     "label": "HABILIDADES",
@@ -31,7 +28,7 @@
     "code": "Código",
     "soon": "Próximamente",
     "p1_title": "Portafolio Personal",
-    "p1_desc": "Mi primer portafolio web construido desde cero con Reflex (Python). Una aplicación fullstack que demuestra mis habilidades en desarrollo backend y frontend.",
+    "p1_desc": "Tarjeta personal web e interactiva programada en Python usando Reflex, diseñada para condensar mi experiencia, habilidades clave y accesos directos de contacto.",
     "p2_title": "Ecommerce + Chatbot RAG",
     "p2_desc": "Backend para ecommerce con chatbot de IA integrado usando Retrieval-Augmented Generation. Django maneja la lógica del negocio mientras el RAG responde preguntas sobre productos.",
     "p3_title": "Juego Ahorcado",
@@ -65,7 +62,7 @@
     "e3_degree": "Bachiller",
     "e3_school": "U.E.C.E. Jean Piaget",
     "e3_date": "2013 — 2018",
-    "certs_title": "Certificaciones",
+    "certs_title": "Cursos",
     "certs": [
       "Desarrollo de APIs con Microservicios — Academos (2026)",
       "Curso de Git — Academos (2025)",
