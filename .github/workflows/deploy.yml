@@ -1,0 +1,91 @@
+name: Deploy Astro site to Pages
+
+# 1. DISPARADORES: Cuándo se ejecuta esta acción
+on:
+  push:
+    branches: [ "main" ] # Se activa cada vez que haces push a la rama 'main'
+  workflow_dispatch:      # Permite ejecutar el flujo manualmente desde la interfaz de GitHub
+
+# 2. PERMISOS: Necesarios para leer el repositorio y escribir en GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 3. CONCURRENCIA: Evita que dos ejecuciones simultáneas entren en conflicto
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  # --- TRABAJO 1: COMPILACIÓN (BUILD) ---
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # Paso A: Descargar el código fuente del repositorio
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # Paso B: Detectar el gestor de paquetes (npm, pnpm o yarn)
+      - name: Detect package manager
+        id: detect-package-manager
+        run: |
+          if [ -f "${{ github.workspace }}/pnpm-lock.yaml" ]; then
+            echo "manager=pnpm" >> $GITHUB_OUTPUT
+            echo "command=install" >> $GITHUB_OUTPUT
+            echo "runner=pnpm" >> $GITHUB_OUTPUT
+          elif [ -f "${{ github.workspace }}/yarn.lock" ]; then
+            echo "manager=yarn" >> $GITHUB_OUTPUT
+            echo "command=install" >> $GITHUB_OUTPUT
+            echo "runner=yarn" >> $GITHUB_OUTPUT
+          elif [ -f "${{ github.workspace }}/package.json" ]; then
+            echo "manager=npm" >> $GITHUB_OUTPUT
+            echo "command=ci" >> $GITHUB_OUTPUT
+            echo "runner=npx" >> $GITHUB_OUTPUT
+          else
+            echo "No package manager found"
+            exit 1
+          fi
+
+      # Paso C: Configurar el entorno de Node.js (versión 20)
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: ${{ steps.detect-package-manager.outputs.manager }}
+
+      # Paso D: Preparar las variables para GitHub Pages
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v5
+
+      # Paso E: Instalar las dependencias de tu proyecto (node_modules)
+      - name: Install dependencies
+        run: ${{ steps.detect-package-manager.outputs.runner }} ${{ steps.detect-package-manager.outputs.command }}
+
+      # Paso F: Compilar el sitio estático de Astro (Genera la carpeta /dist)
+      - name: Build with Astro
+        run: |
+          ${{ steps.detect-package-manager.outputs.runner }} astro build \
+            --site "${{ steps.pages.outputs.origin }}" \
+            --base "${{ steps.pages.outputs.base_path }}"
+
+      # Paso G: Empaquetar la carpeta /dist como artefacto para el despliegue
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./dist
+
+  # --- TRABAJO 2: DESPLIEGUE (DEPLOY) ---
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    needs: build # Espera a que el trabajo 'build' termine con éxito
+    runs-on: ubuntu-latest
+    name: Deploy
+    steps:
+      # Publica el artefacto guardado directamente en la URL de GitHub Pages
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

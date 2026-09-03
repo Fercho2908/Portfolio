@@ -12,4 +12,6 @@ export default defineConfig({
       allowedHosts: true,
     },
   },
+  site: 'https://Fercho2908.github.io',
+  base: '/Portfolio',
 });
