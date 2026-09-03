@@ -121,6 +121,68 @@
     box-shadow: 0 4px 24px -8px var(--color-accent-muted);
   }
 
+  .contact-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    border: 1px solid var(--color-border);
+    background: var(--color-surface-elevated);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  }
+
+  .contact-card:hover {
+    border-color: var(--color-accent);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 32px -12px var(--color-accent-muted);
+  }
+
+  .contact-socket {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--color-border);
+    background: var(--color-surface);
+    color: var(--color-text-secondary);
+    transition: color 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+  }
+
+  .contact-card:hover .contact-socket {
+    color: var(--color-accent);
+    border-color: var(--color-accent-muted);
+  }
+
+  .contact-led {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 9999px;
+    background: var(--color-text-muted);
+    box-shadow: 0 0 0 0 var(--color-accent-muted);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .contact-card:hover .contact-led {
+    background: var(--color-accent);
+    box-shadow: 0 0 10px 2px var(--color-accent-muted);
+  }
+
+  .contact-arrow {
+    width: 1rem;
+    height: 1rem;
+    opacity: 0;
+    transform: translateX(-6px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  .contact-card:hover .contact-arrow {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
   .reveal {
     opacity: 0;
     transform: translateY(24px);

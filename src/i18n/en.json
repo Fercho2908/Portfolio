@@ -83,6 +83,6 @@
     "whatsapp": "WhatsApp"
   },
   "footer": {
-    "built": "Built with Astro + Tailwind"
+    "built": "© Fernando Figuera"
   }
 }
