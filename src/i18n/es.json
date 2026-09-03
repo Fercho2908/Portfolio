@@ -10,8 +10,8 @@
     "name": "Fernando Figuera",
     "title": "TSU en Informática · Est. Ingeniería en Sistemas",
     "description": "Apasionado por la tecnología y la programación. Mi objetivo es aportar y seguir desarrollando mi carrera profesional, aplicando mis conocimientos para diseñar e implementar soluciones tecnológicas innovadoras.",
-    "cta_projects": "Ver proyectos",
-    "cta_contact": "Contactar"
+    "cta_contact": "Contactar",
+    "cta_cv": "Descargar CV"
   },
   "stack": {
     "label": "HABILIDADES",
@@ -78,7 +78,7 @@
     "title": "¿Trabajamos juntos?",
     "description": "Siempre abierto a nuevas oportunidades y colaboraciones.",
     "email": "Email",
-    "phone": "Teléfono",
+    "linkedin": "LinkedIn",
     "github": "GitHub",
     "whatsapp": "WhatsApp"
   },

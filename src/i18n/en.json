@@ -10,8 +10,8 @@
     "name": "Fernando Figuera",
     "title": "IT Technician · Systems Engineering Student",
     "description": "Passionate about technology and programming. My goal is to contribute and keep developing my professional career, applying my knowledge to design and implement innovative technological solutions.",
-    "cta_projects": "View projects",
-    "cta_contact": "Get in touch"
+    "cta_contact": "Get in touch",
+    "cta_cv": "Download CV"
   },
   "stack": {
     "label": "SKILLS",
@@ -78,7 +78,7 @@
     "title": "Let's work together?",
     "description": "Always open to new opportunities and collaborations.",
     "email": "Email",
-    "phone": "Phone",
+    "linkedin": "LinkedIn",
     "github": "GitHub",
     "whatsapp": "WhatsApp"
   },

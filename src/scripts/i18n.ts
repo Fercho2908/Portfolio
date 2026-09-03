@@ -38,6 +38,15 @@ function updateDOM() {
     }
   });
 
+  const cvLink = document.getElementById('cv-link') as HTMLAnchorElement | null;
+  if (cvLink) {
+    const base = cvLink.dataset.base || '/';
+    const file = i18next.language === 'en'
+      ? 'CV Fernando Figuera - English.pdf'
+      : 'CV Fernando Figuera.pdf';
+    cvLink.href = base + encodeURI(file);
+  }
+
   document.documentElement.lang = i18next.language;
 }
 
