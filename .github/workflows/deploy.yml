@@ -66,9 +66,20 @@ jobs:
       # Paso F: Compilar el sitio estático de Astro (Genera la carpeta /dist)
       - name: Build with Astro
         run: |
-          ${{ steps.detect-package-manager.outputs.runner }} astro build \
-            --site "${{ steps.pages.outputs.origin }}" \
-            --base "${{ steps.pages.outputs.base_path }}"
+          if [ "${{ steps.detect-package-manager.outputs.runner }}" = "pnpm" ]; then
+            pnpm exec astro build \
+              --site "${{ steps.pages.outputs.origin }}" \
+              --base "${{ steps.pages.outputs.base_path }}"
+          elif [ "${{ steps.detect-package-manager.outputs.runner }}" = "yarn" ]; then
+            yarn astro build \
+              --site "${{ steps.pages.outputs.origin }}" \
+              --base "${{ steps.pages.outputs.base_path }}"
+          else
+            # npm
+            npx astro build \
+              --site "${{ steps.pages.outputs.origin }}" \
+              --base "${{ steps.pages.outputs.base_path }}"
+          fi
 
       # Paso G: Empaquetar la carpeta /dist como artefacto para el despliegue
       - name: Upload artifact
