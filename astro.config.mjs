@@ -1,17 +1,17 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
-import tailwind from '@astrojs/tailwind';
+import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
-  integrations: [tailwind()],
+  site: 'https://Fercho2908.github.io',
+  base: '/Portfolio',
   server: {
     host: true,
   },
   vite: {
+    plugins: [tailwindcss()],
     server: {
       allowedHosts: true,
     },
   },
-  site: 'https://Fercho2908.github.io',
-  base: '/Portfolio',
 });

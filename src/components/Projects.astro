@@ -1,8 +1,9 @@
 ---
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 const projects = [
   {
     id: 'p1',
-    image: '/profile.webp',
+    image: `${base}profile.webp`,
     tags: ['Python', 'Reflex'],
     link: 'https://profile-red-panda.reflex.run/',
     linkLabel: 'view',
@@ -18,7 +19,7 @@ const projects = [
   },
   {
     id: 'p3',
-    image: '/Ahorcado.webp',
+    image: `${base}Ahorcado.webp`,
     tags: ['VB.NET'],
     link: 'https://github.com/fercho2908/Ahorcado',
     linkLabel: 'code',
@@ -43,7 +44,7 @@ const projects = [
                 <img
                   src={project.image}
                   alt={`Screenshot de ${project.id}`}
-                  class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                  class={`w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 ${project.id === 'p3' ? 'object-center' : 'object-top'}`}
                   loading="lazy"
                 />
               </div>

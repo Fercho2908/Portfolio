@@ -1,6 +1,29 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@variant dark (&:where(.dark, .dark *));
+
+/* ===== Theme tokens ===== */
+
+@theme inline {
+  --color-surface: var(--color-surface);
+  --color-surface-elevated: var(--color-surface-elevated);
+  --color-accent: var(--color-accent);
+  --color-accent-hover: var(--color-accent-hover);
+  --color-accent-muted: var(--color-accent-muted);
+  --color-text-primary: var(--color-text-primary);
+  --color-text-secondary: var(--color-text-secondary);
+  --color-text-muted: var(--color-text-muted);
+  --color-border: var(--color-border);
+}
+
+@theme {
+  --font-display: 'Space Grotesk', system-ui, sans-serif;
+  --font-body: 'Space Grotesk', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+  --spacing-section: clamp(4rem, 8vw, 7rem);
+}
+
+/* ===== CSS variable definitions ===== */
 
 :root {
   --color-surface: oklch(97% 0.005 260);
@@ -28,6 +51,28 @@
   color-scheme: dark;
 }
 
+/* ===== Custom font-size utilities (with letter-spacing) ===== */
+
+@utility text-display-xl {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+
+@utility text-display-lg {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+}
+
+@utility text-display-md {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+/* ===== Base layer ===== */
+
 @layer base {
   html {
     scroll-behavior: smooth;
@@ -53,6 +98,8 @@
     color: var(--color-text-primary);
   }
 }
+
+/* ===== Component layer ===== */
 
 @layer components {
   .section-title {
@@ -86,6 +133,8 @@
     transform: translateY(0);
   }
 }
+
+/* ===== Utility layer ===== */
 
 @layer utilities {
   .stagger-1 { transition-delay: 0.05s; }

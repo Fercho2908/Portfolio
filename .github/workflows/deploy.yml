@@ -41,7 +41,7 @@ jobs:
           elif [ -f "${{ github.workspace }}/package.json" ]; then
             echo "manager=npm" >> $GITHUB_OUTPUT
             echo "command=ci" >> $GITHUB_OUTPUT
-            echo "runner=npx" >> $GITHUB_OUTPUT
+            echo "runner=npm" >> $GITHUB_OUTPUT
           else
             echo "No package manager found"
             exit 1

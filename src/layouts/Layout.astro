@@ -10,6 +10,8 @@ const {
   title = 'Fernando Figuera | Portfolio',
   description = 'TSU en Informática · Est. Ingeniería en Sistemas · Portfolio personal',
 } = Astro.props;
+
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 ---
 
 <!doctype html>
@@ -29,7 +31,7 @@ const {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
     <title>{title}</title>
-    <link rel="icon" type="image/x-icon" href="/ffiguera_logo.ico" />
+    <link rel="icon" type="image/x-icon" href={`${base}ffiguera_logo.ico`} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -37,12 +39,7 @@ const {
       rel="stylesheet"
     />
     <style is:inline>
-      :root {
-        --font-display: 'Space Grotesk', system-ui, sans-serif;
-        --font-mono: 'JetBrains Mono', ui-monospace, monospace;
-      }
-      body { font-family: var(--font-display); }
-      .font-mono { font-family: var(--font-mono); }
+      body { font-family: 'Space Grotesk', system-ui, sans-serif; }
     </style>
   </head>
   <body class="min-h-screen bg-surface text-text-primary antialiased">
