@@ -1,0 +1,150 @@
+{
+  "communities": {
+    "0": [
+      "astro",
+      "i18next",
+      "i18next_browser_languagedetector",
+      "package_dependencies",
+      "package_dependencies_astro",
+      "package_dependencies_i18next",
+      "package_dependencies_i18next_browser_languagedetector",
+      "package_dependencies_tailwindcss",
+      "package_dependencies_tailwindcss_vite",
+      "tailwindcss",
+      "tailwindcss_vite"
+    ],
+    "1": [
+      "package",
+      "package_name",
+      "package_scripts",
+      "package_scripts_astro",
+      "package_scripts_build",
+      "package_scripts_dev",
+      "package_scripts_preview",
+      "package_type",
+      "package_version"
+    ],
+    "2": [
+      "src_components_contact",
+      "src_components_education",
+      "src_components_education_certs",
+      "src_components_experience",
+      "src_components_footer",
+      "src_components_hero",
+      "src_components_projects",
+      "src_components_stack",
+      "src_pages_index"
+    ],
+    "3": [
+      "src_components_header",
+      "src_layouts_layout",
+      "src_layouts_layout_base",
+      "src_scripts_animations",
+      "src_scripts_animations_initanimations",
+      "src_scripts_i18n",
+      "src_scripts_i18n_initi18n",
+      "src_scripts_i18n_togglelanguage",
+      "src_scripts_i18n_updatedom"
+    ],
+    "4": [
+      "ref",
+      "ref_astro_tsconfigs_strict",
+      "ref_astro_types_d_ts",
+      "ref_dist",
+      "tsconfig",
+      "tsconfig_exclude",
+      "tsconfig_extends",
+      "tsconfig_include"
+    ],
+    "5": [
+      "src_scripts_theme",
+      "src_scripts_theme_applytheme",
+      "src_scripts_theme_gettheme",
+      "src_scripts_theme_inittheme",
+      "src_scripts_theme_updatetoggleicon"
+    ],
+    "6": [
+      "opencode_plugins_graphify",
+      "opencode_plugins_graphify_graphifyplugin",
+      "opencode_plugins_graphify_rationale_4"
+    ],
+    "7": [
+      "astro_config"
+    ]
+  },
+  "cohesion": {
+    "0": 0.18181818181818182,
+    "1": 0.2222222222222222,
+    "2": 0.2222222222222222,
+    "3": 0.2777777777777778,
+    "4": 0.25,
+    "5": 0.7,
+    "6": 0.6666666666666666,
+    "7": 1.0
+  },
+  "gods": [
+    {
+      "id": "package_scripts",
+      "label": "scripts",
+      "degree": 5
+    },
+    {
+      "id": "src_scripts_i18n_updatedom",
+      "label": "updateDOM()",
+      "degree": 3
+    },
+    {
+      "id": "src_scripts_theme_applytheme",
+      "label": "applyTheme()",
+      "degree": 3
+    },
+    {
+      "id": "src_scripts_theme_inittheme",
+      "label": "initTheme()",
+      "degree": 3
+    },
+    {
+      "id": "tsconfig_include",
+      "label": "include",
+      "degree": 3
+    },
+    {
+      "id": "src_scripts_i18n_initi18n",
+      "label": "initI18n()",
+      "degree": 2
+    },
+    {
+      "id": "src_scripts_i18n_togglelanguage",
+      "label": "toggleLanguage()",
+      "degree": 2
+    },
+    {
+      "id": "src_scripts_theme_gettheme",
+      "label": "getTheme()",
+      "degree": 2
+    },
+    {
+      "id": "src_scripts_theme_updatetoggleicon",
+      "label": "updateToggleIcon()",
+      "degree": 2
+    },
+    {
+      "id": "package_dependencies_astro",
+      "label": "astro",
+      "degree": 2
+    }
+  ],
+  "surprises": [],
+  "questions": [
+    {
+      "type": "bridge_node",
+      "question": "Why does `dependencies` connect `dependencies` to `package.json`?",
+      "why": "High betweenness centrality (0.091) - this node is a cross-community bridge."
+    },
+    {
+      "type": "isolated_nodes",
+      "question": "What connects `astro`, `i18next`, `i18next-browser-languagedetector` to the rest of the system?",
+      "why": "19 weakly-connected nodes found - possible documentation gaps or missing edges."
+    }
+  ]
+}
