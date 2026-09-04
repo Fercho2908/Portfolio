@@ -36,10 +36,15 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
         <span data-i18n="hero.cta_contact">Contactar</span>
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"/><path d="m21.854 2.147-10.94 10.939"/></svg>
       </a>
-      <a id="cv-link" data-base={base} href="#" download class="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-border text-text-secondary font-medium text-sm hover:border-accent hover:text-accent transition-all duration-200">
-        <span data-i18n="hero.cta_cv">Descargar CV</span>
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-      </a>
+      <span class="relative group inline-flex">
+        <a id="cv-link" data-base={base} href="#" download aria-describedby="cv-tooltip" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-border text-text-secondary font-medium text-sm hover:border-accent hover:text-accent transition-all duration-200">
+          <span data-i18n="hero.cta_cv">Descargar CV</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        </a>
+        <span id="cv-tooltip" data-i18n="hero.cv_tooltip" class="pointer-events-none absolute -top-9 left-1/2 -translate-x-1/2 whitespace-nowrap px-3 py-1.5 rounded-lg bg-surface-elevated border border-border text-xs font-mono text-text-secondary shadow-lg opacity-0 transition-opacity duration-200 group-hover:opacity-100 group-focus-visible:opacity-100">
+          El idioma del CV seguirá el de la página
+        </span>
+      </span>
     </div>
   </div>
 </section>

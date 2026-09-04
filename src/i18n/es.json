@@ -11,7 +11,8 @@
     "title": "TSU en Informática · Est. Ingeniería en Sistemas",
     "description": "Apasionado por la tecnología y la programación. Mi objetivo es aportar y seguir desarrollando mi carrera profesional, aplicando mis conocimientos para diseñar e implementar soluciones tecnológicas innovadoras.",
     "cta_contact": "Contactar",
-    "cta_cv": "Descargar CV"
+    "cta_cv": "Descargar CV",
+    "cv_tooltip": "El idioma del CV seguirá el de la página"
   },
   "stack": {
     "label": "HABILIDADES",
