@@ -1,9 +1,9 @@
 {
   ".opencode/opencode.json": {
-    "mtime": 1788563481.2635036,
-    "seen": 1788563574.40865,
-    "ast_hash": "abcc8b9dcd80bca5f9dde6d9f0c3ae79",
-    "semantic_hash": "abcc8b9dcd80bca5f9dde6d9f0c3ae79"
+    "mtime": 1790821484.9911153,
+    "seen": 1790821727.905132,
+    "ast_hash": "e5f74d14a81702b55bdf53b33ec991d7",
+    "semantic_hash": ""
   },
   ".opencode/plugins/graphify.js": {
     "mtime": 1788563481.2631862,
@@ -84,10 +84,10 @@
     "semantic_hash": "a422b369ecf5f6978dcb0d9b67830bf5"
   },
   "src/layouts/Layout.astro": {
-    "mtime": 1788421307.2685828,
-    "seen": 1788563574.4086816,
-    "ast_hash": "df44423bdff7434d29be572650bd3ee5",
-    "semantic_hash": "df44423bdff7434d29be572650bd3ee5"
+    "mtime": 1790821710.8296094,
+    "seen": 1790821727.9052148,
+    "ast_hash": "aa0b0de6febd2272177014de926046f0",
+    "semantic_hash": ""
   },
   "src/pages/index.astro": {
     "mtime": 1788376571.36732,
@@ -118,5 +118,125 @@
     "seen": 1788563574.408691,
     "ast_hash": "1d3613ac08bdda17e2b82251613dbc21",
     "semantic_hash": "1d3613ac08bdda17e2b82251613dbc21"
+  },
+  ".github/workflows/deploy.yml": {
+    "mtime": 1788422610.8044162,
+    "seen": 1790821727.9052408,
+    "ast_hash": "8316bd75aa89155f793f1457080da546",
+    "semantic_hash": ""
+  },
+  ".opencode/skills/graphify/SKILL.md": {
+    "mtime": 1788563481.2613626,
+    "seen": 1790821727.9052444,
+    "ast_hash": "2e9858a59406dd2af786cf4cb74bc610",
+    "semantic_hash": ""
+  },
+  ".opencode/skills/graphify/references/add-watch.md": {
+    "mtime": 1788563446.596503,
+    "seen": 1790821727.9052489,
+    "ast_hash": "d59d027fe449f06aa03905a01184e779",
+    "semantic_hash": ""
+  },
+  ".opencode/skills/graphify/references/exports.md": {
+    "mtime": 1788563446.598503,
+    "seen": 1790821727.9052517,
+    "ast_hash": "9da2a2152e60a22f07f05fed5158f287",
+    "semantic_hash": ""
+  },
+  ".opencode/skills/graphify/references/extraction-spec.md": {
+    "mtime": 1788563446.599503,
+    "seen": 1790821727.9052548,
+    "ast_hash": "42fef56a01698118f7fd722acdadea34",
+    "semantic_hash": ""
+  },
+  ".opencode/skills/graphify/references/github-and-merge.md": {
+    "mtime": 1788563446.599503,
+    "seen": 1790821727.9052577,
+    "ast_hash": "cde13df085e4c492aeb7ba298a996d0d",
+    "semantic_hash": ""
+  },
+  ".opencode/skills/graphify/references/hooks.md": {
+    "mtime": 1788563446.599503,
+    "seen": 1790821727.9052608,
+    "ast_hash": "3f545db6ce646650bb9de588f5512a27",
+    "semantic_hash": ""
+  },
+  ".opencode/skills/graphify/references/query.md": {
+    "mtime": 1788563446.6245039,
+    "seen": 1790821727.905264,
+    "ast_hash": "3c46f8ad006874260614ed8657d02307",
+    "semantic_hash": ""
+  },
+  ".opencode/skills/graphify/references/transcribe.md": {
+    "mtime": 1788563446.6255038,
+    "seen": 1790821727.9052668,
+    "ast_hash": "67b6a5fa6c0974e18f60db9f8932fbd8",
+    "semantic_hash": ""
+  },
+  ".opencode/skills/graphify/references/update.md": {
+    "mtime": 1788563446.6265037,
+    "seen": 1790821727.9052699,
+    "ast_hash": "9378bd03d56baaf78bd738ab3848f142",
+    "semantic_hash": ""
+  },
+  "AGENTS.md": {
+    "mtime": 1788563481.2627635,
+    "seen": 1790821727.9052732,
+    "ast_hash": "6a47d64fcc136324ca395065a707ef76",
+    "semantic_hash": ""
+  },
+  "DESIGN.md": {
+    "mtime": 1788381290.294092,
+    "seen": 1790821727.905276,
+    "ast_hash": "43e9bcb425242092dba63f2ad99c7c38",
+    "semantic_hash": ""
+  },
+  "PRODUCT.md": {
+    "mtime": 1788378980.198769,
+    "seen": 1790821727.905279,
+    "ast_hash": "5a761e72b1c12f2551bfee414ca0deae",
+    "semantic_hash": ""
+  },
+  "README.md": {
+    "mtime": 1788376583.212641,
+    "seen": 1790821727.9052818,
+    "ast_hash": "6bc3e15116170e43daa4f5ca19a38a57",
+    "semantic_hash": ""
+  },
+  "CV Fernando Figuera.pdf": {
+    "mtime": 1788372329.8090115,
+    "seen": 1790821727.9052846,
+    "ast_hash": "c2857e480ca7aab3e116273742c799c2",
+    "semantic_hash": ""
+  },
+  "public/CV Fernando Figuera - English.pdf": {
+    "mtime": 1788455800.9005802,
+    "seen": 1790821727.9052877,
+    "ast_hash": "99b1b720439e54751f576861284d816c",
+    "semantic_hash": ""
+  },
+  "public/CV Fernando Figuera.pdf": {
+    "mtime": 1788455800.9005802,
+    "seen": 1790821727.9052906,
+    "ast_hash": "fb3a4f4b2953b3c5780f35d452cf44f2",
+    "semantic_hash": ""
+  },
+  "public/Ahorcado.webp": {
+    "mtime": 1788376573.437376,
+    "seen": 1790821727.9052932,
+    "ast_hash": "2d61ef4a452be5e130c3b00364790eca",
+    "semantic_hash": ""
+  },
+  "public/Fernando.webp": {
+    "mtime": 1788376573.437376,
+    "seen": 1790821727.905296,
+    "ast_hash": "948abefb243c92f7823ab80b25424c56",
+    "semantic_hash": ""
+  },
+  "public/profile.webp": {
+    "mtime": 1788376573.437376,
+    "seen": 1790821727.9052992,
+    "ast_hash": "4afe7ae281a5a8c3e6b226a023e610d6",
+    "semantic_hash": ""
   }
 }

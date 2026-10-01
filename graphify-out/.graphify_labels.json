@@ -1,1 +1,23 @@
-{"0": "dependencies", "1": "package.json", "2": "index.astro", "3": "Layout.astro", "4": "tsconfig.json", "5": "theme.ts", "6": "graphify.js", "7": "astro.config.mjs"}
+{
+  "0": "dependencies",
+  "1": "What You Must Do When Invoked",
+  "2": "index.astro",
+  "3": "Design System — Fernando Figuera Portfolio",
+  "4": "tsconfig.json",
+  "5": "theme.ts",
+  "6": "graphify.js",
+  "7": "astro.config.mjs",
+  "8": "/graphify",
+  "9": "Product: Fernando Figuera — Portfolio Landing",
+  "10": "graphify reference: extra exports and benchmark",
+  "11": "Fernando Figuera — Portfolio",
+  "12": "graphify reference: query, path, explain",
+  "13": "opencode.json",
+  "14": "graphify reference: add a URL and watch a folder",
+  "15": "graphify reference: commit hook and native CLAUDE.md integration",
+  "16": "graphify reference: incremental update and cluster-only",
+  "17": "graphify reference: GitHub clone and cross-repo merge",
+  "18": "graphify reference: transcribe video and audio",
+  "19": "AGENTS.md",
+  "20": "extraction-spec.md"
+}
