@@ -2,10 +2,10 @@
 const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 const projects = [
   {
-    id: 'p1',
-    image: `${base}profile.webp`,
-    tags: ['Python', 'Reflex'],
-    link: 'https://profile-red-panda.reflex.run/',
+    id: 'p_florencia',
+    image: `${base}Florencia.webp`,
+    tags: ['Astro', 'Tailwind', 'Web'],
+    link: 'https://www.apartohotelflorencia.com/',
     linkLabel: 'view',
     hasScreenshot: true,
   },
@@ -23,6 +23,14 @@ const projects = [
     tags: ['VB.NET'],
     link: 'https://github.com/fercho2908/Ahorcado',
     linkLabel: 'code',
+    hasScreenshot: true,
+  },
+  {
+    id: 'p1',
+    image: `${base}profile.webp`,
+    tags: ['Python', 'Reflex'],
+    link: 'https://profile-red-panda.reflex.run/',
+    linkLabel: 'view',
     hasScreenshot: true,
   },
 ];
@@ -75,14 +83,16 @@ const projects = [
 
             <div class="p-5 flex flex-col flex-1">
               <h3 class="font-bold text-lg mb-2" data-i18n={`projects.${project.id}_title`}>
-                {project.id === 'p1' ? 'Portafolio Personal' : project.id === 'p2' ? 'Ecommerce + Chatbot RAG' : 'Juego Ahorcado'}
+                {project.id === 'p_florencia' ? 'Aparto-Hotel Florencia' : project.id === 'p1' ? 'Portafolio Personal' : project.id === 'p2' ? 'Ecommerce + Chatbot RAG' : 'Juego Ahorcado'}
               </h3>
               <p class="text-sm text-text-secondary leading-relaxed mb-4 flex-1" data-i18n={`projects.${project.id}_desc`}>
-                {project.id === 'p1'
-                  ? 'Tarjeta personal web e interactiva programada en Python usando Reflex, diseñada para condensar mi experiencia, habilidades clave y accesos directos de contacto.'
-                  : project.id === 'p2'
-                    ? 'Backend para ecommerce con chatbot de IA integrado usando Retrieval-Augmented Generation.'
-                    : 'Mi primer juego, creado en VB.NET a partir de lo aprendido en mi segundo semestre.'}
+                {project.id === 'p_florencia'
+                  ? 'Sitio web corporativo y de reservas para Aparto-Hotel Florencia ubicado en Güiria, Estado Sucre.'
+                  : project.id === 'p1'
+                    ? 'Tarjeta personal web e interactiva programada en Python usando Reflex, diseñada para condensar mi experiencia, habilidades clave y accesos directos de contacto.'
+                    : project.id === 'p2'
+                      ? 'Backend para ecommerce con chatbot de IA integrado usando Retrieval-Augmented Generation.'
+                      : 'Mi primer juego, creado en VB.NET a partir de lo aprendido en mi segundo semestre.'}
               </p>
 
               <div class="flex flex-wrap gap-1.5 mb-4">

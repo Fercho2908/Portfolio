@@ -1,16 +1,16 @@
-# Graph Report - Portafolio  (2026-10-07)
+# Graph Report - Portafolio  (2026-09-30)
 
 ## Corpus Check
-- 33 files · ~23,833 words
+- 33 files · ~23,828 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 156 nodes · 143 edges · 22 communities (16 shown, 5 thin omitted)
+- 153 nodes · 140 edges · 21 communities (15 shown, 5 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `a88e31f9`
+- Built from commit: `bc2dd7a9`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -35,7 +35,6 @@
 - graphify reference: transcribe video and audio
 - AGENTS.md
 - extraction-spec.md
-- package.json
 
 ## God Nodes (most connected - your core abstractions)
 1. `What You Must Do When Invoked` - 12 edges
@@ -55,11 +54,11 @@
 ## Import Cycles
 - None detected.
 
-## Communities (22 total, 5 thin omitted)
+## Communities (21 total, 5 thin omitted)
 
 ### Community 0 - "dependencies"
-Cohesion: 0.18
-Nodes (11): astro, i18next, i18next-browser-languagedetector, dependencies, astro, i18next, i18next-browser-languagedetector, tailwindcss (+3 more)
+Cohesion: 0.10
+Nodes (19): astro, i18next, i18next-browser-languagedetector, dependencies, astro, i18next, i18next-browser-languagedetector, tailwindcss (+11 more)
 
 ### Community 1 - "What You Must Do When Invoked"
 Cohesion: 0.13
@@ -117,26 +116,22 @@ Nodes (3): For git commit hook, For native CLAUDE.md integration, graphify refer
 Cohesion: 0.50
 Nodes (3): For --cluster-only, For --update (incremental re-extraction), graphify reference: incremental update and cluster-only
 
-### Community 21 - "package.json"
-Cohesion: 0.17
-Nodes (11): devDependencies, @playwright/test, name, scripts, astro, build, dev, preview (+3 more)
-
 ## Knowledge Gaps
-- **88 isolated node(s):** `$schema`, `.opencode/plugins/graphify.js`, `name`, `type`, `version` (+83 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 111 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **87 isolated node(s):** `$schema`, `.opencode/plugins/graphify.js`, `name`, `type`, `version` (+82 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 110 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **5 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `What You Must Do When Invoked` connect `What You Must Do When Invoked` to `/graphify`?**
-  _High betweenness centrality (0.019) - this node is a cross-community bridge._
+  _High betweenness centrality (0.020) - this node is a cross-community bridge._
 - **Why does `/graphify` connect `/graphify` to `What You Must Do When Invoked`?**
-  _High betweenness centrality (0.014) - this node is a cross-community bridge._
-- **Why does `dependencies` connect `dependencies` to `package.json`?**
-  _High betweenness centrality (0.013) - this node is a cross-community bridge._
+  _High betweenness centrality (0.015) - this node is a cross-community bridge._
 - **What connects `$schema`, `.opencode/plugins/graphify.js`, `name` to the rest of the system?**
-  _88 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _87 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **Should `dependencies` be split into smaller, more focused modules?**
+  _Cohesion score 0.1 - nodes in this community are weakly interconnected._
 - **Should `What You Must Do When Invoked` be split into smaller, more focused modules?**
   _Cohesion score 0.13333333333333333 - nodes in this community are weakly interconnected._
 - **Should `index.astro` be split into smaller, more focused modules?**

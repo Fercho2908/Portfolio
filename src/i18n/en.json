@@ -28,6 +28,8 @@
     "view": "View",
     "code": "Code",
     "soon": "Coming soon",
+    "p_florencia_title": "Aparto-Hotel Florencia",
+    "p_florencia_desc": "Corporate and booking website for Aparto-Hotel Florencia located in Güiria, Sucre State. Built with Astro and Tailwind CSS, optimized for performance and SEO.",
     "p1_title": "Personal Portfolio",
     "p1_desc": "Interactive personal web card programmed in Python using Reflex, designed to condense my experience, key skills, and quick contact links.",
     "p2_title": "Ecommerce + RAG Chatbot",

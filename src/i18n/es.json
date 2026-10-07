@@ -28,6 +28,8 @@
     "view": "Ver",
     "code": "Código",
     "soon": "Próximamente",
+    "p_florencia_title": "Aparto-Hotel Florencia",
+    "p_florencia_desc": "Sitio web corporativo y de reservas para Aparto-Hotel Florencia ubicado en Güiria, Estado Sucre. Desarrollado con Astro y Tailwind CSS, optimizado para rendimiento y SEO.",
     "p1_title": "Portafolio Personal",
     "p1_desc": "Tarjeta personal web e interactiva programada en Python usando Reflex, diseñada para condensar mi experiencia, habilidades clave y accesos directos de contacto.",
     "p2_title": "Ecommerce + Chatbot RAG",

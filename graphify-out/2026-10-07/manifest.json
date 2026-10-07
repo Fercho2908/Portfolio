@@ -18,10 +18,10 @@
     "semantic_hash": "62ff475228daf539ab972d7fecfafa0c"
   },
   "package.json": {
-    "mtime": 1791408431.248478,
-    "seen": 1791408593.1617036,
-    "ast_hash": "19fea5669e33299a4b6c9870ce4a667f",
-    "semantic_hash": ""
+    "mtime": 1788415912.5997252,
+    "seen": 1788563574.4086637,
+    "ast_hash": "fc90878e18c470256b6d4c4dd7e02f33",
+    "semantic_hash": "fc90878e18c470256b6d4c4dd7e02f33"
   },
   "src/components/Contact.astro": {
     "mtime": 1788460433.6993396,
@@ -60,10 +60,10 @@
     "semantic_hash": "7396c640dbc161029a7274c7e2188e25"
   },
   "src/components/Projects.astro": {
-    "mtime": 1791416098.8492188,
-    "seen": 1791416112.544317,
-    "ast_hash": "69e9079056edc6735aea91054f16d7eb",
-    "semantic_hash": ""
+    "mtime": 1788421436.9979658,
+    "seen": 1788563574.4086757,
+    "ast_hash": "2c5ab15f3ecb18507e830f9c5e9263e2",
+    "semantic_hash": "2c5ab15f3ecb18507e830f9c5e9263e2"
   },
   "src/components/Stack.astro": {
     "mtime": 1788407494.091763,
@@ -72,16 +72,16 @@
     "semantic_hash": "d4769e57b21247d17c67534465ffd5a7"
   },
   "src/i18n/en.json": {
-    "mtime": 1791416084.5968518,
-    "seen": 1791416112.5443223,
-    "ast_hash": "8ec157c44bcb17ea2a3d1e48027562b5",
-    "semantic_hash": ""
+    "mtime": 1788562675.8614793,
+    "seen": 1788563574.4086788,
+    "ast_hash": "b39401fbf10d33637c533b260ad2b590",
+    "semantic_hash": "b39401fbf10d33637c533b260ad2b590"
   },
   "src/i18n/es.json": {
-    "mtime": 1791416078.6446986,
-    "seen": 1791416112.5443246,
-    "ast_hash": "2be795f69800a8d31eed584f793bf89f",
-    "semantic_hash": ""
+    "mtime": 1788562664.3291552,
+    "seen": 1788563574.4086802,
+    "ast_hash": "a422b369ecf5f6978dcb0d9b67830bf5",
+    "semantic_hash": "a422b369ecf5f6978dcb0d9b67830bf5"
   },
   "src/layouts/Layout.astro": {
     "mtime": 1790821710.8296094,
@@ -237,12 +237,6 @@
     "mtime": 1788376573.437376,
     "seen": 1790821727.9052992,
     "ast_hash": "4afe7ae281a5a8c3e6b226a023e610d6",
-    "semantic_hash": ""
-  },
-  "public/Florencia.webp": {
-    "mtime": 1791415122.733349,
-    "seen": 1791416112.544381,
-    "ast_hash": "05dc5a2dae4fdb0bfd2a0ce32b39818e",
     "semantic_hash": ""
   }
 }
